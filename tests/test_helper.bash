@@ -9,7 +9,7 @@ teardown() {
 }
 
 mock_home() {
-  export MOCK_HOME="${GG_TEST_DIR}/home/user"
+  local MOCK_HOME="${GG_TEST_DIR}/home/user"
   mkdir -p "$MOCK_HOME"
   export HOME="$MOCK_HOME"
 }
