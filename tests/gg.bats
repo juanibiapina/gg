@@ -13,3 +13,12 @@ load test_helper
   assert_failure
   assert_output "gg: directory alias 'invalid' not found"
 }
+
+@test "with an argument and configuration, cd to that directory" {
+  local adir_path="${GG_TEST_DIR}/dirs/dir"
+  mkdir -p "$adir_path"
+  add_alias "dir" "$adir_path"
+
+  gg dir
+  assert_pwd "$adir_path"
+}
