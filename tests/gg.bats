@@ -7,3 +7,9 @@ load test_helper
   gg
   assert_pwd "$HOME"
 }
+
+@test "with an argument without configuration fails with message" {
+  run gg invalid
+  assert_failure
+  assert_output "gg: directory alias 'invalid' not found"
+}
