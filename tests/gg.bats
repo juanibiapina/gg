@@ -22,3 +22,13 @@ load test_helper
   gg dir
   assert_pwd "$adir_path"
 }
+
+@test "with an argument and missing entry in configuration, fails with message" {
+  local adir_path="${GG_TEST_DIR}/dirs/dir"
+  mkdir -p "$adir_path"
+  add_alias "dir" "$adir_path"
+
+  run gg invalid
+  assert_failure
+  assert_output "gg: directory alias 'invalid' not found"
+}
