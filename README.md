@@ -12,10 +12,8 @@ Use [basher](https://github.com/juanibiapina/basher) or manually clone this repo
 
 Create a config file ~/.gg/aliases with your directory aliases:
 
-    ~~~ sh
     a /home/user/dev/project_a
     b /home/user/dev/project_b
     t /tmp
-    ~~~
 
 and run `gg a` to cd into that directory.
