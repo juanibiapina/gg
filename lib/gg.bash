@@ -17,7 +17,8 @@ gg() {
     fi
 
     if test "${dir_aliases["$1"]+isset}"; then
-      cd ${dir_aliases["$1"]}
+      eval local zpath="${dir_aliases["$1"]}"
+      cd $zpath
     else
       echo "gg: directory alias '$1' not found"
       false
