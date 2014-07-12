@@ -6,7 +6,16 @@ A script to make it easy to navigate between common directories.
 
 ## Installation
 
-Use [basher](https://github.com/juanibiapina/basher) or manually clone this repo and source lib/gg.bash.
+### Using [basher](https://github.com/juanibiapina/basher)
+
+~~~ sh
+basher install juanibiapina/gg
+require juanibiapina/gg
+~~~
+
+### Manually
+
+Clone this repo and source lib/gg.bash.
 
 ## Usage
 
